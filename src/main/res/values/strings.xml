@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Geenie</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title">Title</string>
+    <string name="desc">Description</string>
+    <string name="server_client_id">737289765405-5k28q10hagbate5afs5qc2tcl0ouk5ea.apps.googleusercontent.com</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Home</item>
+        <item >Chat</item>
+        <item >Search</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/home_icon</item>
+        <item>@drawable/chat_icon</item>
+        <item>@drawable/search</item>
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="title_activity_current_subscriptions">CurrentSubscriptionsActivity</string>
+    <string name="title_activity_start_services">StartServicesActivity</string>
+</resources>

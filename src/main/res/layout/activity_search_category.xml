@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/selcategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/categories"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:text = "Categories"/>
+
+    <Spinner
+        android:id="@+id/categories"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_marginTop="10dp"
+        android:color= "#66ff0000"
+        android:alpha="0.6"
+        android:background="@android:drawable/btn_dropdown"
+        />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal = "true"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:layout_marginTop="40dp"
+        android:color= "#66ff0000"
+        android:alpha="0.6"
+        android:background="@color/light_blue"
+        android:text="Search"/>
+</LinearLayout>

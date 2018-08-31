@@ -1,0 +1,26 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Geenie="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home_icon"
+        android:orderInCategory="1"
+        Geenie:showAsAction="always"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile_icon"
+        android:orderInCategory="2"
+        Geenie:showAsAction="always"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/chat_icon"
+        android:orderInCategory="3"
+        Geenie:showAsAction="always"
+        android:title="Chat" />
+
+</menu>

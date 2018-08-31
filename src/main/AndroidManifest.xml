@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.geenie" >
+
+    <!-- Required Permissions -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.SEND" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.NETWORK" />
+
+    <permission
+        android:name="com.app.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.app.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.app.activity.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.app.activity.SignUpActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+        <activity
+            android:name="com.app.activity.StartServicesActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Transparent" >
+        </activity>
+
+        <activity
+            android:name="com.app.activity.UserActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.app.activity.ChatActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
+        </activity>
+        <activity
+            android:name="com.app.activity.SearchCategoryActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.app.activity.SearchActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.app.activity.SearchResultActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.app.activity.TopicDescriptionActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.app.activity.SingleItemViewActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.app.activity.SubscriptionActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.app.activity.UserListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.app.activity.NewWishActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.GCM_RECEIVED_ACTION" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.app.geenie.geeniechat" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.app.services.GeenieGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.app.services.RegistrationIntentService"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.REGISTRATION_COMPLETE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.app.services.GeenieInstanceIDListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service android:name="com.app.services.MQTTservice" >
+        </service>
+
+        <receiver android:name="com.app.receivers.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.app.activity.CurrentSubscriptionsActivity"
+            android:label="@string/title_activity_current_subscriptions" >
+        </activity>
+           </application>
+
+</manifest>

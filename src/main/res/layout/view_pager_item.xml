@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/PageNumber"
+        android:layout_width="450dp"
+        android:layout_height="550dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>
